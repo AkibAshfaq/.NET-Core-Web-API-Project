@@ -1,0 +1,14 @@
+A:\CODE Files\VS 2022\Assignment\Ecommarce\DAL\obj\Debug\net10.0\DAL.csproj.AssemblyReference.cache
+A:\CODE Files\VS 2022\Assignment\Ecommarce\DAL\obj\Debug\net10.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+A:\CODE Files\VS 2022\Assignment\Ecommarce\DAL\obj\Debug\net10.0\DAL.AssemblyInfoInputs.cache
+A:\CODE Files\VS 2022\Assignment\Ecommarce\DAL\obj\Debug\net10.0\DAL.AssemblyInfo.cs
+A:\CODE Files\VS 2022\Assignment\Ecommarce\DAL\obj\Debug\net10.0\DAL.csproj.CoreCompileInputs.cache
+A:\CODE Files\VS 2022\Assignment\Ecommarce\DAL\bin\Debug\net10.0\DAL.deps.json
+A:\CODE Files\VS 2022\Assignment\Ecommarce\DAL\bin\Debug\net10.0\DAL.runtimeconfig.json
+A:\CODE Files\VS 2022\Assignment\Ecommarce\DAL\bin\Debug\net10.0\DAL.dll
+A:\CODE Files\VS 2022\Assignment\Ecommarce\DAL\bin\Debug\net10.0\DAL.pdb
+A:\CODE Files\VS 2022\Assignment\Ecommarce\DAL\obj\Debug\net10.0\DAL.dll
+A:\CODE Files\VS 2022\Assignment\Ecommarce\DAL\obj\Debug\net10.0\refint\DAL.dll
+A:\CODE Files\VS 2022\Assignment\Ecommarce\DAL\obj\Debug\net10.0\DAL.pdb
+A:\CODE Files\VS 2022\Assignment\Ecommarce\DAL\obj\Debug\net10.0\DAL.genruntimeconfig.cache
+A:\CODE Files\VS 2022\Assignment\Ecommarce\DAL\obj\Debug\net10.0\ref\DAL.dll

@@ -1,0 +1,15 @@
+A:\CODE Files\VS 2022\Assignment\Ecommarce\BLL\bin\Debug\net10.0\BLL.deps.json
+A:\CODE Files\VS 2022\Assignment\Ecommarce\BLL\bin\Debug\net10.0\BLL.dll
+A:\CODE Files\VS 2022\Assignment\Ecommarce\BLL\bin\Debug\net10.0\BLL.pdb
+A:\CODE Files\VS 2022\Assignment\Ecommarce\BLL\obj\Debug\net10.0\BLL.GeneratedMSBuildEditorConfig.editorconfig
+A:\CODE Files\VS 2022\Assignment\Ecommarce\BLL\obj\Debug\net10.0\BLL.AssemblyInfoInputs.cache
+A:\CODE Files\VS 2022\Assignment\Ecommarce\BLL\obj\Debug\net10.0\BLL.AssemblyInfo.cs
+A:\CODE Files\VS 2022\Assignment\Ecommarce\BLL\obj\Debug\net10.0\BLL.csproj.CoreCompileInputs.cache
+A:\CODE Files\VS 2022\Assignment\Ecommarce\BLL\obj\Debug\net10.0\BLL.dll
+A:\CODE Files\VS 2022\Assignment\Ecommarce\BLL\obj\Debug\net10.0\refint\BLL.dll
+A:\CODE Files\VS 2022\Assignment\Ecommarce\BLL\obj\Debug\net10.0\BLL.pdb
+A:\CODE Files\VS 2022\Assignment\Ecommarce\BLL\obj\Debug\net10.0\ref\BLL.dll
+A:\CODE Files\VS 2022\Assignment\Ecommarce\BLL\obj\Debug\net10.0\BLL.csproj.AssemblyReference.cache
+A:\CODE Files\VS 2022\Assignment\Ecommarce\BLL\bin\Debug\net10.0\DAL.dll
+A:\CODE Files\VS 2022\Assignment\Ecommarce\BLL\bin\Debug\net10.0\DAL.pdb
+A:\CODE Files\VS 2022\Assignment\Ecommarce\BLL\obj\Debug\net10.0\BLL.csproj.Up2Date
