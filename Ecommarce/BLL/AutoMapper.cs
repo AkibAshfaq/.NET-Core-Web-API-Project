@@ -9,7 +9,10 @@ namespace BLL
         static MapperConfiguration cf = new MapperConfiguration( c =>{
 
             c.CreateMap<ProductDTO, Product>().ReverseMap();
-        
+            c.CreateMap<CustomerDTO, Customer>().ReverseMap();
+            c.CreateMap<OrderDTO, Order>().ReverseMap();
+            c.CreateMap<OrderDetailDTO, OrderDetail>().ReverseMap();
+
         });
 
         public static Mapper GetMapper()

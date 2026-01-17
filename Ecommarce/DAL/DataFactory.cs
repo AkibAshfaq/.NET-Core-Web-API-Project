@@ -16,6 +16,9 @@ namespace DAL
         public IRepository<Product> ProductFeature(){
             return new ProductRepo(db);
         }
+        public IEcommarce EcommarceFeature(){
+            return new EcommarceRepo(db);
+        }
 
     }
 }

@@ -13,6 +13,152 @@
     }
   ],
   "paths": {
+    "/api/ECommarce/HomePage": {
+      "get": {
+        "tags": [
+          "ECommarce"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ECommarce/HomePage/{Catagory}": {
+      "get": {
+        "tags": [
+          "ECommarce"
+        ],
+        "parameters": [
+          {
+            "name": "Catagory",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ECommarce/AddToCartById/{ProductId}": {
+      "post": {
+        "tags": [
+          "ECommarce"
+        ],
+        "parameters": [
+          {
+            "name": "ProductId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ECommarce/RemoveFromCartById/{ProductId}": {
+      "post": {
+        "tags": [
+          "ECommarce"
+        ],
+        "parameters": [
+          {
+            "name": "ProductId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ECommarce/AddToCartByName/{ProductName}": {
+      "post": {
+        "tags": [
+          "ECommarce"
+        ],
+        "parameters": [
+          {
+            "name": "ProductName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ECommarce/ViewCart": {
+      "get": {
+        "tags": [
+          "ECommarce"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ECommarce/Checkout": {
+      "post": {
+        "tags": [
+          "ECommarce"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ECommarce/Payment": {
+      "post": {
+        "tags": [
+          "ECommarce"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Product/AllProduct": {
       "get": {
         "tags": [
@@ -188,7 +334,7 @@
       "ProductDTO": {
         "type": "object",
         "properties": {
-          "id": {
+          "productId": {
             "pattern": "^-?(?:0|[1-9]\\d*)$",
             "type": [
               "integer",
@@ -196,16 +342,24 @@
             ],
             "format": "int32"
           },
-          "name": {
+          "productName": {
             "type": "string"
           },
-          "price": {
+          "productPrice": {
             "pattern": "^-?(?:0|[1-9]\\d*)(?:\\.\\d+)?$",
             "type": [
               "number",
               "string"
             ],
             "format": "double"
+          },
+          "productStock": {
+            "pattern": "^-?(?:0|[1-9]\\d*)$",
+            "type": [
+              "integer",
+              "string"
+            ],
+            "format": "int32"
           }
         }
       },
@@ -243,6 +397,9 @@
     }
   },
   "tags": [
+    {
+      "name": "ECommarce"
+    },
     {
       "name": "Product"
     },

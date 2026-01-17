@@ -38,12 +38,12 @@ namespace ApplicationLayer.Controllers
                 return BadRequest("Product data Incorrect");
             }
 
-            if (string.IsNullOrEmpty(product.Name))
+            if (string.IsNullOrEmpty(product.ProductName))
             {
                 return BadRequest("Product Name is required");
             }
 
-            if (product.Price <= 0)
+            if (product.ProductPrice <= 0)
             {
                 return BadRequest("Product Price must be greater than 0");
             }
@@ -62,17 +62,17 @@ namespace ApplicationLayer.Controllers
         [HttpPut("Update")]
         public IActionResult UpdateInventory([FromBody]ProductDTO product)
         {
-            if (pdservice.ProductById(product.Id) == null)
+            if (pdservice.ProductById(product.ProductId) == null)
             {
                 return BadRequest("Product Invalid");
             }
-            if (string.IsNullOrEmpty(product.Name))
+            if (string.IsNullOrEmpty(product.ProductName))
             {
-                product.Name = pdservice.ProductById(product.Id).Name;
+                product.ProductName = pdservice.ProductById(product.ProductId).ProductName;
             }
-            if (product.Price <= 0)
+            if (product.ProductPrice <= 0)
             {
-                product.Price = pdservice.ProductById(product.Id).Price;
+                product.ProductPrice = pdservice.ProductById(product.ProductId).ProductPrice;
             }
             var service = pdservice.UpdateProduct(product);
             return Ok(service);

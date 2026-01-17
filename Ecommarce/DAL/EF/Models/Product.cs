@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
@@ -8,9 +9,12 @@ namespace DAL.EF.Models
 {
     public class Product
     {
-        public int Id { get; set; }
+        [Key]
+        public int ProductId { get; set; }
+
         [Column(TypeName = "varchar(50)")]
-        public string Name { get; set; }
-        public decimal Price { get; set; }
+        public string ProductName { get; set; }
+        public decimal ProductPrice { get; set; }
+        public int ProductStock { get; set; }
     }
 }

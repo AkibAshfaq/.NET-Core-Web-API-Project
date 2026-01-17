@@ -13,7 +13,13 @@ builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
 builder.Services.AddScoped<ProductDTO>();
+builder.Services.AddScoped<OrderDTO>();
+builder.Services.AddScoped<CustomerDTO>();
+builder.Services.AddScoped<OrderDetailDTO>();
+
+
 builder.Services.AddScoped<ProductServices>();
+builder.Services.AddScoped<OrderServices>();
 
 builder.Services.AddScoped<DataFactory>();
 builder.Services.AddDbContext<DataContext>(options =>

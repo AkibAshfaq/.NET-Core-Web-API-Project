@@ -3,28 +3,36 @@
   "WorkspaceRootPath": "A:\\CODE Files\\VS 2022\\Assignment\\Ecommarce\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{BB8C1324-F9AE-7A64-054A-AD97015D61F0}|ApplicationLayer\\ApplicationLayer.csproj|a:\\code files\\vs 2022\\assignment\\ecommarce\\applicationlayer\\controllers\\ecommarcecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BB8C1324-F9AE-7A64-054A-AD97015D61F0}|ApplicationLayer\\ApplicationLayer.csproj|solutionrelative:applicationlayer\\controllers\\ecommarcecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BB8C1324-F9AE-7A64-054A-AD97015D61F0}|ApplicationLayer\\ApplicationLayer.csproj|a:\\code files\\vs 2022\\assignment\\ecommarce\\applicationlayer\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BB8C1324-F9AE-7A64-054A-AD97015D61F0}|ApplicationLayer\\ApplicationLayer.csproj|solutionrelative:applicationlayer\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{12357D34-2A02-1ECD-BC6C-D84ADDC1A72E}|DAL\\DAL.csproj|a:\\code files\\vs 2022\\assignment\\ecommarce\\dal\\dataaccesspoint\\productrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{12357D34-2A02-1ECD-BC6C-D84ADDC1A72E}|DAL\\DAL.csproj|solutionrelative:dal\\dataaccesspoint\\productrepo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{12357D34-2A02-1ECD-BC6C-D84ADDC1A72E}|DAL\\DAL.csproj|a:\\code files\\vs 2022\\assignment\\ecommarce\\dal\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{12357D34-2A02-1ECD-BC6C-D84ADDC1A72E}|DAL\\DAL.csproj|solutionrelative:dal\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C24D12DD-8178-40B6-B4C4-EF7A61EE1882}|BLL\\BLL.csproj|a:\\code files\\vs 2022\\assignment\\ecommarce\\bll\\services\\productservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C24D12DD-8178-40B6-B4C4-EF7A61EE1882}|BLL\\BLL.csproj|solutionrelative:bll\\services\\productservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{12357D34-2A02-1ECD-BC6C-D84ADDC1A72E}|DAL\\DAL.csproj|a:\\code files\\vs 2022\\assignment\\ecommarce\\dal\\datafactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{12357D34-2A02-1ECD-BC6C-D84ADDC1A72E}|DAL\\DAL.csproj|solutionrelative:dal\\datafactory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C24D12DD-8178-40B6-B4C4-EF7A61EE1882}|BLL\\BLL.csproj|a:\\code files\\vs 2022\\assignment\\ecommarce\\bll\\services\\orderservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C24D12DD-8178-40B6-B4C4-EF7A61EE1882}|BLL\\BLL.csproj|solutionrelative:bll\\services\\orderservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{12357D34-2A02-1ECD-BC6C-D84ADDC1A72E}|DAL\\DAL.csproj|a:\\code files\\vs 2022\\assignment\\ecommarce\\dal\\ef\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{12357D34-2A02-1ECD-BC6C-D84ADDC1A72E}|DAL\\DAL.csproj|solutionrelative:dal\\ef\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12357D34-2A02-1ECD-BC6C-D84ADDC1A72E}|DAL\\DAL.csproj|a:\\code files\\vs 2022\\assignment\\ecommarce\\dal\\ef\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12357D34-2A02-1ECD-BC6C-D84ADDC1A72E}|DAL\\DAL.csproj|solutionrelative:dal\\ef\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12357D34-2A02-1ECD-BC6C-D84ADDC1A72E}|DAL\\DAL.csproj|a:\\code files\\vs 2022\\assignment\\ecommarce\\dal\\ef\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12357D34-2A02-1ECD-BC6C-D84ADDC1A72E}|DAL\\DAL.csproj|solutionrelative:dal\\ef\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{12357D34-2A02-1ECD-BC6C-D84ADDC1A72E}|DAL\\DAL.csproj|a:\\code files\\vs 2022\\assignment\\ecommarce\\dal\\ef\\models\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{12357D34-2A02-1ECD-BC6C-D84ADDC1A72E}|DAL\\DAL.csproj|solutionrelative:dal\\ef\\models\\orderdetail.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C24D12DD-8178-40B6-B4C4-EF7A61EE1882}|BLL\\BLL.csproj|a:\\code files\\vs 2022\\assignment\\ecommarce\\bll\\services\\productservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C24D12DD-8178-40B6-B4C4-EF7A61EE1882}|BLL\\BLL.csproj|solutionrelative:bll\\services\\productservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,24 +42,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 7,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DataFactory.cs",
-              "DocumentMoniker": "A:\\CODE Files\\VS 2022\\Assignment\\Ecommarce\\DAL\\DataFactory.cs",
-              "RelativeDocumentMoniker": "DAL\\DataFactory.cs",
-              "ToolTip": "A:\\CODE Files\\VS 2022\\Assignment\\Ecommarce\\DAL\\DataFactory.cs",
-              "RelativeToolTip": "DAL\\DataFactory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-17T18:29:23.894Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 3,
               "Title": "Product.cs",
               "DocumentMoniker": "A:\\CODE Files\\VS 2022\\Assignment\\Ecommarce\\DAL\\EF\\Models\\Product.cs",
               "RelativeDocumentMoniker": "DAL\\EF\\Models\\Product.cs",
@@ -59,59 +54,97 @@
               "RelativeToolTip": "DAL\\EF\\Models\\Product.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-17T17:54:28.804Z",
+              "WhenOpened": "2026-01-17T23:28:32.886Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IRepository.cs",
-              "DocumentMoniker": "A:\\CODE Files\\VS 2022\\Assignment\\Ecommarce\\DAL\\Interfaces\\IRepository.cs",
-              "RelativeDocumentMoniker": "DAL\\Interfaces\\IRepository.cs",
-              "ToolTip": "A:\\CODE Files\\VS 2022\\Assignment\\Ecommarce\\DAL\\Interfaces\\IRepository.cs",
-              "RelativeToolTip": "DAL\\Interfaces\\IRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAoAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "Customer.cs",
+              "DocumentMoniker": "A:\\CODE Files\\VS 2022\\Assignment\\Ecommarce\\DAL\\EF\\Models\\Customer.cs",
+              "RelativeDocumentMoniker": "DAL\\EF\\Models\\Customer.cs",
+              "ToolTip": "A:\\CODE Files\\VS 2022\\Assignment\\Ecommarce\\DAL\\EF\\Models\\Customer.cs",
+              "RelativeToolTip": "DAL\\EF\\Models\\Customer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-17T17:52:48.497Z",
+              "WhenOpened": "2026-01-17T23:28:31.236Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ProductServices.cs",
-              "DocumentMoniker": "A:\\CODE Files\\VS 2022\\Assignment\\Ecommarce\\BLL\\Services\\ProductServices.cs",
-              "RelativeDocumentMoniker": "BLL\\Services\\ProductServices.cs",
-              "ToolTip": "A:\\CODE Files\\VS 2022\\Assignment\\Ecommarce\\BLL\\Services\\ProductServices.cs",
-              "RelativeToolTip": "BLL\\Services\\ProductServices.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAowBsAAAAqAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "Order.cs",
+              "DocumentMoniker": "A:\\CODE Files\\VS 2022\\Assignment\\Ecommarce\\DAL\\EF\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "DAL\\EF\\Models\\Order.cs",
+              "ToolTip": "A:\\CODE Files\\VS 2022\\Assignment\\Ecommarce\\DAL\\EF\\Models\\Order.cs",
+              "RelativeToolTip": "DAL\\EF\\Models\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-17T17:22:35.579Z",
+              "WhenOpened": "2026-01-17T23:28:30.372Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "OrderDetail.cs",
+              "DocumentMoniker": "A:\\CODE Files\\VS 2022\\Assignment\\Ecommarce\\DAL\\EF\\Models\\OrderDetail.cs",
+              "RelativeDocumentMoniker": "DAL\\EF\\Models\\OrderDetail.cs",
+              "ToolTip": "A:\\CODE Files\\VS 2022\\Assignment\\Ecommarce\\DAL\\EF\\Models\\OrderDetail.cs",
+              "RelativeToolTip": "DAL\\EF\\Models\\OrderDetail.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-17T23:28:21.463Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ProductRepo.cs",
-              "DocumentMoniker": "A:\\CODE Files\\VS 2022\\Assignment\\Ecommarce\\DAL\\DataAccessPoint\\ProductRepo.cs",
-              "RelativeDocumentMoniker": "DAL\\DataAccessPoint\\ProductRepo.cs",
-              "ToolTip": "A:\\CODE Files\\VS 2022\\Assignment\\Ecommarce\\DAL\\DataAccessPoint\\ProductRepo.cs",
-              "RelativeToolTip": "DAL\\DataAccessPoint\\ProductRepo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-17T17:16:33.424Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "ProductController.cs",
               "DocumentMoniker": "A:\\CODE Files\\VS 2022\\Assignment\\Ecommarce\\ApplicationLayer\\Controllers\\ProductController.cs",
               "RelativeDocumentMoniker": "ApplicationLayer\\Controllers\\ProductController.cs",
               "ToolTip": "A:\\CODE Files\\VS 2022\\Assignment\\Ecommarce\\ApplicationLayer\\Controllers\\ProductController.cs",
               "RelativeToolTip": "ApplicationLayer\\Controllers\\ProductController.cs",
-              "ViewState": "AgIAABoAAAAAAAAAAAA9wCYAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-17T17:14:21.799Z",
+              "WhenOpened": "2026-01-17T23:25:03.716Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrderServices.cs",
+              "DocumentMoniker": "A:\\CODE Files\\VS 2022\\Assignment\\Ecommarce\\BLL\\Services\\OrderServices.cs",
+              "RelativeDocumentMoniker": "BLL\\Services\\OrderServices.cs",
+              "ToolTip": "A:\\CODE Files\\VS 2022\\Assignment\\Ecommarce\\BLL\\Services\\OrderServices.cs",
+              "RelativeToolTip": "BLL\\Services\\OrderServices.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAwwDUAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-17T23:24:23.062Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProductServices.cs",
+              "DocumentMoniker": "A:\\CODE Files\\VS 2022\\Assignment\\Ecommarce\\BLL\\Services\\ProductServices.cs",
+              "RelativeDocumentMoniker": "BLL\\Services\\ProductServices.cs",
+              "ToolTip": "A:\\CODE Files\\VS 2022\\Assignment\\Ecommarce\\BLL\\Services\\ProductServices.cs",
+              "RelativeToolTip": "BLL\\Services\\ProductServices.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-17T23:24:02.474Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ECommarceController.cs",
+              "DocumentMoniker": "A:\\CODE Files\\VS 2022\\Assignment\\Ecommarce\\ApplicationLayer\\Controllers\\ECommarceController.cs",
+              "RelativeDocumentMoniker": "ApplicationLayer\\Controllers\\ECommarceController.cs",
+              "ToolTip": "A:\\CODE Files\\VS 2022\\Assignment\\Ecommarce\\ApplicationLayer\\Controllers\\ECommarceController.cs",
+              "RelativeToolTip": "ApplicationLayer\\Controllers\\ECommarceController.cs",
+              "ViewState": "AgIAACkAAAAAAAAAAAAIwDcAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-17T23:23:23.648Z",
               "EditorCaption": ""
             }
           ]

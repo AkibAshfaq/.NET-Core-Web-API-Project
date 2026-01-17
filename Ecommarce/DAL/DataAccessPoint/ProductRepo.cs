@@ -32,7 +32,7 @@ namespace DAL.DataAccessPoint
 
         public bool UpdateProduct(Product pd)
         {
-            var extprod = db.Products.Find(pd.Id);
+            var extprod = db.Products.Find(pd.ProductId);
             db.Entry(extprod).CurrentValues.SetValues(pd);
             return db.SaveChanges() > 0;
         }
@@ -45,7 +45,7 @@ namespace DAL.DataAccessPoint
         public Product GetProductByName(string name)
         {
             var product = (from p in db.Products
-                           where p.Name.Contains(name)
+                           where p.ProductName.Contains(name)
                            select p).SingleOrDefault();
             return product;
         }
