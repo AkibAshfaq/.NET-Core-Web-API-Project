@@ -25,18 +25,18 @@ namespace BLL.Services
             return dto;
         }
 
-        public Product ProductById(int id)
+        public ProductDTO ProductById(int id)
         {
             Product byid = factory.ProductFeature().GetProductById(id);
             ProductDTO dto = AutoMapper.GetMapper().Map<ProductDTO>(byid);
-            return byid;
+            return dto;
         }
 
-        public Product ProductByName(string name)
+        public ProductDTO ProductByName(string name)
         {
             Product byname = factory.ProductFeature().GetProductByName(name);
             ProductDTO dto = AutoMapper.GetMapper().Map<ProductDTO>(byname);
-            return byname;
+            return dto;
         }
 
         public bool AddProduct(ProductDTO product)

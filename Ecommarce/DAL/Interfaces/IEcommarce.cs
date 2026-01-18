@@ -8,6 +8,7 @@ namespace DAL.Interfaces
     public interface IEcommarce
     {
         public List<Product> AllProductDetails();
+        public List<Product> ByCategoryProductDetails(string Category);
         public List<Product> ViewCart();
         public List<Product> AddToCart(Product product);
         public List<Product> RemoveFromCart(Product product);

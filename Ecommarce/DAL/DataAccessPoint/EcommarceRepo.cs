@@ -22,6 +22,11 @@ namespace DAL.DataAccessPoint
             MyCart.Add(product);
             return MyCart;
         }
+
+        public List<Product> ByCategoryProductDetails(string Category)
+        {
+            return db.Products.Where(p => p.ProductCategory == Category).ToList();
+        }
         public List<Product> RemoveFromCart(Product product)
         {
             MyCart.Remove(product);

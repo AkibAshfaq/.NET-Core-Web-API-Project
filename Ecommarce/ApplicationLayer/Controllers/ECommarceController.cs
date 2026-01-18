@@ -1,7 +1,9 @@
-﻿using BLL.Services;
+﻿using BLL.DTOs;
+using BLL.Services;
 using DAL.EF;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 
 namespace ApplicationLayer.Controllers
 {
@@ -10,21 +12,27 @@ namespace ApplicationLayer.Controllers
     public class ECommarceController : ControllerBase
     {
         OrderServices odservice;
+        ProductServices pdservice;
 
-        public ECommarceController(OrderServices odservice)
+        public ECommarceController(OrderServices odservice, ProductServices pdservice)
         {
             this.odservice = odservice;
+            this.pdservice = pdservice;
         }
 
         [HttpGet("HomePage")]
         public IActionResult HomePage()
         {
-            return Ok();
+            var products = pdservice.AllProducts();
+            if (products == null)
+            {
+                return BadRequest("No products available");
+            }
+            return Ok(products);
         }
 
-
-        [HttpGet("HomePage/{Catagory}")]
-        public IActionResult HomePage(string? Catagory)
+        [HttpGet("HomePage/Category/{Catagory}")]
+        public IActionResult HomePage(string Catagory)
         {
             if (Catagory == null)
             {
@@ -32,58 +40,102 @@ namespace ApplicationLayer.Controllers
             }
             else
             {
-                return Ok();
+                var product = odservice.ProductByCategory(Catagory);
+                if (product == null)
+                {
+                    return BadRequest("No products available in this category");
+                }
+                return Ok(product);
             }
         }
 
 
-        [HttpPost("AddToCartById/{ProductId}")]
+        [HttpPost("AddToCart/Id/{ProductId}")]
         public IActionResult AddToCart(int ProductId)
         {
-            if (ProductId == null)
+            if (ProductId <= 0)
             {
                 return BadRequest("Product ID is required to add to cart");
             }
-            else
+
+            var product = odservice.AddToCartById(ProductId);
+            if (!product.Any())
             {
-                return Ok(odservice.AddToCartById(ProductId));
+                return NotFound("Product not found");
             }
+            return Ok(product);
         }
 
-        [HttpPost("RemoveFromCartById/{ProductId}")]
+        [HttpPost("RemoveFromCart/Id/{ProductId}")]
         public IActionResult RemoveFromCart(int ProductId)
         {
-            if (ProductId == null)
+            if (ProductId < 0)
             {
                 return BadRequest("Product ID is required to add to cart");
             }
-            else
+
+            var product = odservice.RemoveFromCartById(ProductId);
+            if (product == null)
             {
-                return Ok(odservice.RemoveFromCartById(ProductId));
+                return BadRequest("Product not found in cart");
             }
+            return Ok();
         }
 
 
-        [HttpPost("AddToCartByName/{ProductName}")]
+        [HttpPost("AddToCart/Name/{ProductName}")]
         public IActionResult AddToCart(string? ProductName)
         {
-            if (ProductName == null)
+            if (ProductName.IsNullOrEmpty())
             {
                 return BadRequest("Product Name is required to add to cart");
             }
-            else
-            {
-                return Ok();
+
+            var result = odservice.AddToCartByName(ProductName);
+            if(result == null)
+            { 
+                 return BadRequest("Product not found");
             }
+            return Ok(result);
         }
+
+        [HttpPost("RemoveFromCart/Name/{ProductName}")]
+        public IActionResult RemoveFromCart(string ProductName)
+        {
+            if (ProductName.IsNullOrEmpty())
+            {
+                return BadRequest("Product Name is required to remove from cart");
+            }
+
+            var result = odservice.RemoveFromCartByName(ProductName);
+            if (!result)
+            {
+                return BadRequest("Product not found in cart");
+            }
+            return Ok();    
+
+        }
+
 
         [HttpGet("ViewCart")]
         public IActionResult ViewCart()
         {
-            return Ok();
+            var cartItems = odservice.ViewCart();
+            return Ok(cartItems);
         }
 
-        [HttpPost("Checkout")]
+        [HttpGet("ClearCart")]
+        public IActionResult ClearCart()
+        {
+            var result = odservice.ClearCart();
+            if (!result)
+            {
+                return BadRequest("Cart is already empty");
+            }
+            return Ok("Cart Cleared");
+        }
+
+        [HttpGet("Checkout")]
         public IActionResult Checkout()
         {
             return Ok();

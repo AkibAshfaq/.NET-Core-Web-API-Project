@@ -14,6 +14,8 @@ namespace DAL.EF.Models
 
         [Column(TypeName = "varchar(50)")]
         public string ProductName { get; set; }
+        [Column(TypeName = "varchar(50)")]
+        public string ProductCategory { get; set; }
         public decimal ProductPrice { get; set; }
         public int ProductStock { get; set; }
     }

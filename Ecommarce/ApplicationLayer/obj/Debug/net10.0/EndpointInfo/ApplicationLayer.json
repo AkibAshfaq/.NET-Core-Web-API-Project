@@ -25,7 +25,7 @@
         }
       }
     },
-    "/api/ECommarce/HomePage/{Catagory}": {
+    "/api/ECommarce/HomePage/Category/{Catagory}": {
       "get": {
         "tags": [
           "ECommarce"
@@ -47,7 +47,7 @@
         }
       }
     },
-    "/api/ECommarce/AddToCartById/{ProductId}": {
+    "/api/ECommarce/AddToCart/Id/{ProductId}": {
       "post": {
         "tags": [
           "ECommarce"
@@ -74,7 +74,7 @@
         }
       }
     },
-    "/api/ECommarce/RemoveFromCartById/{ProductId}": {
+    "/api/ECommarce/RemoveFromCart/Id/{ProductId}": {
       "post": {
         "tags": [
           "ECommarce"
@@ -101,7 +101,29 @@
         }
       }
     },
-    "/api/ECommarce/AddToCartByName/{ProductName}": {
+    "/api/ECommarce/AddToCart/Name/{ProductName}": {
+      "post": {
+        "tags": [
+          "ECommarce"
+        ],
+        "parameters": [
+          {
+            "name": "ProductName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ECommarce/RemoveFromCart/Name/{ProductName}": {
       "post": {
         "tags": [
           "ECommarce"
@@ -135,8 +157,20 @@
         }
       }
     },
+    "/api/ECommarce/ClearCart": {
+      "get": {
+        "tags": [
+          "ECommarce"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/ECommarce/Checkout": {
-      "post": {
+      "get": {
         "tags": [
           "ECommarce"
         ],
@@ -352,6 +386,9 @@
               "string"
             ],
             "format": "double"
+          },
+          "productCategory": {
+            "type": "string"
           },
           "productStock": {
             "pattern": "^-?(?:0|[1-9]\\d*)$",

@@ -2,7 +2,7 @@
   {
     "ContainingType": "ApplicationLayer.Controllers.ECommarceController",
     "Method": "AddToCart",
-    "RelativePath": "api/ECommarce/AddToCartById/{ProductId}",
+    "RelativePath": "api/ECommarce/AddToCart/Id/{ProductId}",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -18,7 +18,7 @@
   {
     "ContainingType": "ApplicationLayer.Controllers.ECommarceController",
     "Method": "AddToCart",
-    "RelativePath": "api/ECommarce/AddToCartByName/{ProductName}",
+    "RelativePath": "api/ECommarce/AddToCart/Name/{ProductName}",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -35,7 +35,17 @@
     "ContainingType": "ApplicationLayer.Controllers.ECommarceController",
     "Method": "Checkout",
     "RelativePath": "api/ECommarce/Checkout",
-    "HttpMethod": "POST",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApplicationLayer.Controllers.ECommarceController",
+    "Method": "ClearCart",
+    "RelativePath": "api/ECommarce/ClearCart",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
@@ -54,7 +64,7 @@
   {
     "ContainingType": "ApplicationLayer.Controllers.ECommarceController",
     "Method": "HomePage",
-    "RelativePath": "api/ECommarce/HomePage/{Catagory}",
+    "RelativePath": "api/ECommarce/HomePage/Category/{Catagory}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -80,7 +90,7 @@
   {
     "ContainingType": "ApplicationLayer.Controllers.ECommarceController",
     "Method": "RemoveFromCart",
-    "RelativePath": "api/ECommarce/RemoveFromCartById/{ProductId}",
+    "RelativePath": "api/ECommarce/RemoveFromCart/Id/{ProductId}",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -88,6 +98,22 @@
       {
         "Name": "ProductId",
         "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApplicationLayer.Controllers.ECommarceController",
+    "Method": "RemoveFromCart",
+    "RelativePath": "api/ECommarce/RemoveFromCart/Name/{ProductName}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ProductName",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],

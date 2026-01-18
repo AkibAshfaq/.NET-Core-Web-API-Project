@@ -9,5 +9,7 @@ namespace BLL.DTOs
         public int ProductID { get; set; }
         public string ProductName { get; set; }
         public int Quantity { get; set; }
+        public decimal PerUnitPrice { get; set; }
+        public decimal TotalPrice { get; set; }
     }
 }

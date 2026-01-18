@@ -52,8 +52,7 @@ namespace DAL.DataAccessPoint
 
         public List<Product> GetAllProducts()
         {
-            var products = (from p in db.Products
-                            select p).ToList();
+            var products = db.Products.ToList();
             return products;
         }
     }
