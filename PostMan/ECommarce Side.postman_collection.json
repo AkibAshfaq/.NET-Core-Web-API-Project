@@ -1,0 +1,345 @@
+{
+  "info": {
+    "_postman_id": "1ab6a56f-d1a3-4bc3-8616-fd4703183067",
+    "name": "ECommarce Side",
+    "description": "### Welcome to Postman! This is your first collection. \n\nCollections are your starting point for building and testing APIs. You can use this one to:\n\n• Group related requests\n• Test your API in real-world scenarios\n• Document and share your requests\n\nUpdate the name and overview whenever you’re ready to make it yours.\n\n[Learn more about Postman Collections.](https://learning.postman.com/docs/collections/collections-overview/)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "50777772",
+    "_collection_link": "https://go.postman.co/collection/50777772-1ab6a56f-d1a3-4bc3-8616-fd4703183067?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Homepage",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:7002/api/ECommarce/HomePage",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "7002",
+          "path": [
+            "api",
+            "ECommarce",
+            "HomePage"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Homepage Category Filter",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:7002/api/ECommarce/HomePage/Category/Kitchen",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "7002",
+          "path": [
+            "api",
+            "ECommarce",
+            "HomePage",
+            "Category",
+            "Kitchen"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Search Product By Name",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:7002/api/ECommarce/Search/Pepsi Cola",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "7002",
+          "path": [
+            "api",
+            "ECommarce",
+            "Search",
+            "Pepsi Cola"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add Cart By ID",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:7002/api/ECommarce/AddToCart/Id/17",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "7002",
+          "path": [
+            "api",
+            "ECommarce",
+            "AddToCart",
+            "Id",
+            "17"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Remove Cart By ID",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:7002/api/ECommarce/RemoveFromCart/Id/17",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "7002",
+          "path": [
+            "api",
+            "ECommarce",
+            "RemoveFromCart",
+            "Id",
+            "17"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Add to Cart by Name",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:7002/api/ECommarce/AddToCart/Name/B",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "7002",
+          "path": [
+            "api",
+            "ECommarce",
+            "AddToCart",
+            "Name",
+            "B"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Remove From Cart by Name",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "exec": [
+              "pm.test(\"Status code is 200\", function () {",
+              "    pm.response.to.have.status(200);",
+              "});"
+            ],
+            "type": "text/javascript",
+            "packages": {},
+            "requests": {}
+          }
+        }
+      ],
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "https://localhost:7002/api/ECommarce/RemoveFromCart/Name/Pepsi Cola",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "7002",
+          "path": [
+            "api",
+            "ECommarce",
+            "RemoveFromCart",
+            "Name",
+            "Pepsi Cola"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "View Cart",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "https://localhost:7002/api/ECommarce/ViewCart",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "7002",
+          "path": [
+            "api",
+            "ECommarce",
+            "ViewCart"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Clear Cart",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:7002/api/ECommarce/ClearCart",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "7002",
+          "path": [
+            "api",
+            "ECommarce",
+            "ClearCart"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Checkout Details",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:7002/api/ECommarce/OrderCheckout",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "7002",
+          "path": [
+            "api",
+            "ECommarce",
+            "OrderCheckout"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Payment",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:7002/api/ECommarce/Payment/Card",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "7002",
+          "path": [
+            "api",
+            "ECommarce",
+            "Payment",
+            "Card"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Search Order History",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:7002/api/ECommarce/OrderHistory/1",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "7002",
+          "path": [
+            "api",
+            "ECommarce",
+            "OrderHistory",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Decrease From Cart",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "url": {
+          "raw": "https://localhost:7002/api/ECommarce/CutFromCart/17",
+          "protocol": "https",
+          "host": [
+            "localhost"
+          ],
+          "port": "7002",
+          "path": [
+            "api",
+            "ECommarce",
+            "CutFromCart",
+            "17"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
