@@ -82,5 +82,15 @@ namespace DAL.DataAccessPoint
             return new OrderDetail();
         }
 
+        public int CheckStock(int productId)
+        {
+            var product = db.Products.Where(p => p.ProductId == productId).FirstOrDefault();
+            if (product != null)
+            {
+                return product.ProductStock;
+            }
+            return 0;
+        }
+
     }
 }

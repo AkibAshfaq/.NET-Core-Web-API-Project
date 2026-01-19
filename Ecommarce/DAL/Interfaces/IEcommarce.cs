@@ -18,5 +18,6 @@ namespace DAL.Interfaces
         public void PaymentGatway(OrderDetail order);
         public List<OrderDetail> GetOrderById(int id);
         public OrderDetail GetOrderByCustomerId(int id);
+        public int CheckStock(int productId);
     }
 }

@@ -33,9 +33,16 @@ namespace BLL.Services
             var ext = mycart.Find(item => item.ProductId == product.ProductId);
             if (ext != null)
             {
-                ext.quantity += 1;
-                ext.Totalprice = ext.perunitprice * ext.quantity;
-                return mycart;
+                if (ext.quantity <= factory.EcommarceFeature().CheckStock(ext.ProductId) - 1)
+                {
+                    ext.quantity += 1;
+                    ext.Totalprice = ext.perunitprice * ext.quantity;
+                    return mycart;
+                }
+                else
+                {
+                    return mycart;
+                }
             }
 
             var MAP = AutoMapper.GetMapper().Map<CartDTO>(product);
@@ -65,7 +72,7 @@ namespace BLL.Services
             var ext = mycart.Find(item => item.ProductId == product);
             if (ext != null)
             {
-                if(ext.quantity >= 0)
+                if(ext.quantity > 1)
                 {
                     ext.quantity -= 1;
                     ext.Totalprice = ext.perunitprice * ext.quantity;
