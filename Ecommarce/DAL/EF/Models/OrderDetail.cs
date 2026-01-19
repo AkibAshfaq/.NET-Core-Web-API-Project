@@ -14,5 +14,6 @@ namespace DAL.EF.Models
         public int CustomerId { get; set; }
         public virtual Customer Customer { get; set; }
         public decimal TotalAmmount { get; set; }
+        public string PaymentMethod { get; set; }
     }
 }
