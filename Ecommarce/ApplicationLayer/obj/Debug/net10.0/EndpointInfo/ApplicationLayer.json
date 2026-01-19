@@ -48,7 +48,7 @@
       }
     },
     "/api/ECommarce/AddToCart/Id/{ProductId}": {
-      "post": {
+      "put": {
         "tags": [
           "ECommarce"
         ],
@@ -75,7 +75,7 @@
       }
     },
     "/api/ECommarce/RemoveFromCart/Id/{ProductId}": {
-      "post": {
+      "delete": {
         "tags": [
           "ECommarce"
         ],
@@ -102,7 +102,7 @@
       }
     },
     "/api/ECommarce/AddToCart/Name/{ProductName}": {
-      "post": {
+      "put": {
         "tags": [
           "ECommarce"
         ],
@@ -124,7 +124,7 @@
       }
     },
     "/api/ECommarce/CutFromCart/{id}": {
-      "post": {
+      "delete": {
         "tags": [
           "ECommarce"
         ],
@@ -151,7 +151,7 @@
       }
     },
     "/api/ECommarce/RemoveFromCart/Name/{ProductName}": {
-      "post": {
+      "delete": {
         "tags": [
           "ECommarce"
         ],

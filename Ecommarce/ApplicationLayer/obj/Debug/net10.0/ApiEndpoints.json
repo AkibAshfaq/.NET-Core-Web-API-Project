@@ -3,7 +3,7 @@
     "ContainingType": "ApplicationLayer.Controllers.ECommarceController",
     "Method": "AddToCart",
     "RelativePath": "api/ECommarce/AddToCart/Id/{ProductId}",
-    "HttpMethod": "POST",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -19,7 +19,7 @@
     "ContainingType": "ApplicationLayer.Controllers.ECommarceController",
     "Method": "AddToCart",
     "RelativePath": "api/ECommarce/AddToCart/Name/{ProductName}",
-    "HttpMethod": "POST",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -45,7 +45,7 @@
     "ContainingType": "ApplicationLayer.Controllers.ECommarceController",
     "Method": "CutFromCart",
     "RelativePath": "api/ECommarce/CutFromCart/{id}",
-    "HttpMethod": "POST",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -129,7 +129,7 @@
     "ContainingType": "ApplicationLayer.Controllers.ECommarceController",
     "Method": "RemoveFromCart",
     "RelativePath": "api/ECommarce/RemoveFromCart/Id/{ProductId}",
-    "HttpMethod": "POST",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
@@ -145,7 +145,7 @@
     "ContainingType": "ApplicationLayer.Controllers.ECommarceController",
     "Method": "RemoveFromCart",
     "RelativePath": "api/ECommarce/RemoveFromCart/Name/{ProductName}",
-    "HttpMethod": "POST",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [

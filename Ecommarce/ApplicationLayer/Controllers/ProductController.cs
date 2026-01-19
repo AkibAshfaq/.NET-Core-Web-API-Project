@@ -20,6 +20,10 @@ namespace ApplicationLayer.Controllers
         public IActionResult GetProducts()
         {
             var products = pdservice.AllProducts();
+            if (!products.Any())
+            {
+                return BadRequest("No Products Available");
+            }
             return Ok(products);
         }
 
@@ -27,6 +31,10 @@ namespace ApplicationLayer.Controllers
         public IActionResult GetProduct(int id)
         {
             var product=pdservice.ProductById(id);
+            if(product == null)
+            {
+                return NotFound("Product Not Found");
+            }
             return Ok(product);
         }
 
@@ -56,6 +64,10 @@ namespace ApplicationLayer.Controllers
         public IActionResult DeleteFromInventory(int id)
         {
             var service = pdservice.DeleteProduct(id);
+            if (!service)
+            {
+                return BadRequest("Product Deletion Failed");
+            }
             return Ok(service);
         }
 

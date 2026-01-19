@@ -26,6 +26,10 @@ namespace DAL.DataAccessPoint
         public bool DeleteProduct(int id)
         {
             var DeleteProduct = db.Products.Find(id);
+            if(DeleteProduct == null)
+            {
+                return false;
+            }
             db.Products.Remove(DeleteProduct);
             return db.SaveChanges() > 0;
         }
@@ -33,13 +37,22 @@ namespace DAL.DataAccessPoint
         public bool UpdateProduct(Product pd)
         {
             var extprod = db.Products.Find(pd.ProductId);
+            if(extprod == null)
+            {
+                return false;
+            }
             db.Entry(extprod).CurrentValues.SetValues(pd);
             return db.SaveChanges() > 0;
         }
 
         public Product GetProductById(int id)
         {
-            return db.Products.Find(id);
+            var product = db.Products.Find(id);
+            if(product == null)
+            {
+                return new Product();
+            }
+            return product;
         }
 
         public Product GetProductByName(string name)

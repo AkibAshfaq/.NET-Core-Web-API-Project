@@ -28,6 +28,7 @@ namespace BLL.Services
         public ProductDTO ProductById(int id)
         {
             Product byid = factory.ProductFeature().GetProductById(id);
+            if (byid == null) return new ProductDTO();
             ProductDTO dto = AutoMapper.GetMapper().Map<ProductDTO>(byid);
             return dto;
         }
@@ -43,7 +44,6 @@ namespace BLL.Services
         {
             Product prod = AutoMapper.GetMapper().Map<Product>(product);
             return factory.ProductFeature().CreateProduct(prod);
-            
         }
 
         public bool UpdateProduct(ProductDTO product)
@@ -56,6 +56,7 @@ namespace BLL.Services
         public bool DeleteProduct(int id)
         {
             var repo = factory.ProductFeature();
+            if(repo == null) return false;
             return repo.DeleteProduct(id);
         }
 

@@ -50,7 +50,7 @@ namespace ApplicationLayer.Controllers
         }
 
 
-        [HttpPost("AddToCart/Id/{ProductId}")]
+        [HttpPut("AddToCart/Id/{ProductId}")]
         public IActionResult AddToCart(int ProductId)
         {
             if (ProductId <= 0)
@@ -66,7 +66,7 @@ namespace ApplicationLayer.Controllers
             return Ok(product);
         }
 
-        [HttpPost("RemoveFromCart/Id/{ProductId}")]
+        [HttpDelete("RemoveFromCart/Id/{ProductId}")]
         public IActionResult RemoveFromCart(int ProductId)
         {
             if (ProductId < 0)
@@ -79,11 +79,11 @@ namespace ApplicationLayer.Controllers
             {
                 return BadRequest("Product not found in cart");
             }
-            return Ok();
+            return Ok("Product Removed From The Cart");
         }
 
 
-        [HttpPost("AddToCart/Name/{ProductName}")]
+        [HttpPut("AddToCart/Name/{ProductName}")]
         public IActionResult AddToCart(string? ProductName)
         {
             if (ProductName.IsNullOrEmpty())
@@ -99,7 +99,7 @@ namespace ApplicationLayer.Controllers
             return Ok(result);
         }
 
-        [HttpPost("CutFromCart/{id}")]
+        [HttpDelete("CutFromCart/{id}")]
         public IActionResult CutFromCart(int id)
         {
             if (id <= 0)
@@ -114,7 +114,7 @@ namespace ApplicationLayer.Controllers
             return Ok(result);
         }
 
-        [HttpPost("RemoveFromCart/Name/{ProductName}")]
+        [HttpDelete("RemoveFromCart/Name/{ProductName}")]
         public IActionResult RemoveFromCart(string ProductName)
         {
             if (ProductName.IsNullOrEmpty())
@@ -127,7 +127,7 @@ namespace ApplicationLayer.Controllers
             {
                 return BadRequest("Product not found in cart");
             }
-            return Ok();
+            return Ok("Product Removed From The Cart");
 
         }
 
@@ -138,7 +138,7 @@ namespace ApplicationLayer.Controllers
             var cartItems = odservice.ViewCart();
             if (!cartItems.Any())
             {
-                return BadRequest("EmptyCart");
+                return BadRequest("Empty Cart");
             }
             return Ok(cartItems);
         }
