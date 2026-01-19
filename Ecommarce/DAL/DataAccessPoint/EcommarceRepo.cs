@@ -54,5 +54,33 @@ namespace DAL.DataAccessPoint
         {
             throw new NotImplementedException();
         }
+
+        public void AddToOrder(Order order)
+        {
+            db.Orders.Add(order);
+            db.SaveChanges();
+        }
+
+        public void PaymentGatway(OrderDetail order)
+        {
+            db.OrderDetails.Add(order);
+            db.SaveChanges();
+        }
+
+        public List<OrderDetail> GetOrderById(int id)
+        {
+            List<OrderDetail> orderDetail = db.OrderDetails.Where( c => c.CustomerId == id).ToList();
+            return orderDetail;
+        }
+        public OrderDetail GetOrderByCustomerId(int id)
+        {
+            var orderDetail = db.OrderDetails.Where(o => o.CustomerId == id).FirstOrDefault();
+            if (orderDetail != null)
+            {
+                return orderDetail;
+            }
+            return new OrderDetail();
+        }
+
     }
 }

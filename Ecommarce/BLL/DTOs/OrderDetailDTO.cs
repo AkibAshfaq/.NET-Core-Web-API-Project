@@ -11,5 +11,6 @@ namespace BLL.DTOs
         public int OrdersID { get; set; }
         public int CustomerId { get; set; }
         public decimal TotalAmmount { get; set; }
+        public string PaymentMethod { get; set; }
     }
 }

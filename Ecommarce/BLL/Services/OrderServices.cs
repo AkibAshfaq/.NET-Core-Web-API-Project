@@ -30,22 +30,17 @@ namespace BLL.Services
                 return new List<CartDTO>();
             }
 
-            var ext = mycart.Find(item => item.ProductID == product.ProductId);
+            var ext = mycart.Find(item => item.ProductId == product.ProductId);
             if (ext != null)
             {
-                ext.Quantity += 1;
-                ext.TotalPrice = ext.PerUnitPrice * ext.Quantity;
+                ext.quantity += 1;
+                ext.Totalprice = ext.perunitprice * ext.quantity;
                 return mycart;
             }
 
-            CartDTO cart = new CartDTO {
-                ProductID = product.ProductId,
-                ProductName = product.ProductName,
-                Quantity = 1,
-                PerUnitPrice = product.ProductPrice,
-                TotalPrice = product.ProductPrice
-            };
-            mycart.Add(cart);
+            var MAP = AutoMapper.GetMapper().Map<CartDTO>(product);
+
+            mycart.Add(MAP);
             return mycart;
         }
 
@@ -65,9 +60,29 @@ namespace BLL.Services
             return AddToCart(dto);
         }
 
+        public List<CartDTO> DecreaseOneById(int product)
+        {
+            var ext = mycart.Find(item => item.ProductId == product);
+            if (ext != null)
+            {
+                if(ext.quantity >= 0)
+                {
+                    ext.quantity -= 1;
+                    ext.Totalprice = ext.perunitprice * ext.quantity;
+                    return mycart;
+                }
+                else
+                {
+                    return RemoveFromCartById(product) ? mycart : mycart;
+                }    
+            }
+
+            return mycart;
+        }
+
         public bool RemoveFromCartById(int productId)
         {
-            return mycart.RemoveAll(item => item.ProductID == productId) > 0;
+            return mycart.RemoveAll(item => item.ProductId == productId) > 0;
         }
 
         public List<CartDTO> AddToCartByName(string ProductName)
@@ -98,16 +113,62 @@ namespace BLL.Services
             return mycart.Count == 0;
         }
 
-        public Decimal TotalCost()
+        public decimal TotalCost()
         {
-            Decimal total = 0;
+            decimal total = 0;
             foreach (var item in mycart)
             {
-                total += item.TotalPrice;
+                total += item.Totalprice;
             }
             return total;
         }
 
+
+       public ProductDTO SearchProduct(string ProductName)
+        {
+            ProductDTO dto = pdservice.ProductByName(ProductName);
+            if (dto == null)
+            {
+                return new ProductDTO();
+            }
+            return dto;
+        }
+
+        public List<OrderDetailDTO> GetOrderById(int id)
+        {
+            List<OrderDetail> order = factory.EcommarceFeature().GetOrderById(id);
+            List<OrderDetailDTO> dto = AutoMapper.GetMapper().Map<List<OrderDetailDTO>>(order);
+            return dto;
+        }
+        
+        public bool PlaceOrder(string pay)
+        {
+            foreach(var item in mycart)
+            {
+                OrderDTO orderdto = new OrderDTO
+                {
+                    CustomerId = 1,
+                    ProductId = item.ProductId,
+                    quantity = item.quantity,
+                    perunitprice = item.perunitprice,
+                    Totalprice = item.Totalprice
+                };
+                Order order = AutoMapper.GetMapper().Map<Order>(orderdto);
+                factory.EcommarceFeature().AddToOrder(order);
+            }
+
+            OrderDetailDTO orderdetaildto = new OrderDetailDTO
+            {
+                CustomerId = 1,
+                TotalAmmount = TotalCost(),
+                PaymentMethod = pay
+            };
+            OrderDetail orderdetail = AutoMapper.GetMapper().Map<OrderDetail>(orderdetaildto);
+            factory.EcommarceFeature().PaymentGatway(orderdetail);
+
+            ClearCart();
+            return true;
+        }
 
     }
 }

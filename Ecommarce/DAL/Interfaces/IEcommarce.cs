@@ -14,5 +14,9 @@ namespace DAL.Interfaces
         public List<Product> RemoveFromCart(Product product);
         public bool PlaceOrder(List<Product> order);
         public string ViewOrderStatus();
+        public void AddToOrder(Order order);
+        public void PaymentGatway(OrderDetail order);
+        public List<OrderDetail> GetOrderById(int id);
+        public OrderDetail GetOrderByCustomerId(int id);
     }
 }

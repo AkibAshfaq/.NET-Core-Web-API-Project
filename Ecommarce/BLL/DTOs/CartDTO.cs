@@ -6,10 +6,10 @@ namespace BLL.DTOs
 {
     public class CartDTO
     {
-        public int ProductID { get; set; }
+        public int ProductId { get; set; }
         public string ProductName { get; set; }
-        public int Quantity { get; set; }
-        public decimal PerUnitPrice { get; set; }
-        public decimal TotalPrice { get; set; }
+        public int quantity { get; set; }
+        public decimal perunitprice { get; set; }
+        public decimal Totalprice { get; set; }
     }
 }

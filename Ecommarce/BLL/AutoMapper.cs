@@ -12,7 +12,16 @@ namespace BLL
             c.CreateMap<CustomerDTO, Customer>().ReverseMap();
             c.CreateMap<OrderDTO, Order>().ReverseMap();
             c.CreateMap<OrderDetailDTO, OrderDetail>().ReverseMap();
-
+            c.CreateMap<CartDTO, ProductDTO>().ReverseMap().ForMember(
+                dest => dest.Totalprice,
+                opt => opt.MapFrom(src => src.ProductPrice)
+            ).ForMember(
+                dest => dest.perunitprice,
+                opt => opt.MapFrom(src => src.ProductPrice)
+            ).ForMember(
+                dest => dest.quantity,
+                opt => opt.MapFrom(src => 1)
+            );
         });
 
         public static Mapper GetMapper()

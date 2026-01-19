@@ -33,8 +33,8 @@
   },
   {
     "ContainingType": "ApplicationLayer.Controllers.ECommarceController",
-    "Method": "Checkout",
-    "RelativePath": "api/ECommarce/Checkout",
+    "Method": "ClearCart",
+    "RelativePath": "api/ECommarce/ClearCart",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
@@ -43,12 +43,18 @@
   },
   {
     "ContainingType": "ApplicationLayer.Controllers.ECommarceController",
-    "Method": "ClearCart",
-    "RelativePath": "api/ECommarce/ClearCart",
-    "HttpMethod": "GET",
+    "Method": "CutFromCart",
+    "RelativePath": "api/ECommarce/CutFromCart/{id}",
+    "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -79,12 +85,44 @@
   },
   {
     "ContainingType": "ApplicationLayer.Controllers.ECommarceController",
-    "Method": "Payment",
-    "RelativePath": "api/ECommarce/Payment",
-    "HttpMethod": "POST",
+    "Method": "Checkout",
+    "RelativePath": "api/ECommarce/OrderCheckout",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApplicationLayer.Controllers.ECommarceController",
+    "Method": "OrderHistory",
+    "RelativePath": "api/ECommarce/OrderHistory/{CustomerId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CustomerId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApplicationLayer.Controllers.ECommarceController",
+    "Method": "Payment",
+    "RelativePath": "api/ECommarce/Payment/{pay}",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "pay",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": []
   },
   {
@@ -108,6 +146,22 @@
     "Method": "RemoveFromCart",
     "RelativePath": "api/ECommarce/RemoveFromCart/Name/{ProductName}",
     "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "ProductName",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ApplicationLayer.Controllers.ECommarceController",
+    "Method": "search",
+    "RelativePath": "api/ECommarce/Search/{ProductName}",
+    "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
     "Parameters": [

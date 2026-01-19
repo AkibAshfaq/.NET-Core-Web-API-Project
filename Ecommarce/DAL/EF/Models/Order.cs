@@ -16,5 +16,8 @@ namespace DAL.EF.Models
         [ForeignKey("Product")]
         public int ProductId { get; set; }
         public virtual Product Product { get; set; }
+        public decimal Quantity { get; set; }
+        public decimal perunitprice { get; set; }
+        public decimal Totalprice { get; set; }
     }
 }

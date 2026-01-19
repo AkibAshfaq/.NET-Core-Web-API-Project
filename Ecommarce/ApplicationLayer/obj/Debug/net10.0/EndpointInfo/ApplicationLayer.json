@@ -123,6 +123,33 @@
         }
       }
     },
+    "/api/ECommarce/CutFromCart/{id}": {
+      "post": {
+        "tags": [
+          "ECommarce"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/ECommarce/RemoveFromCart/Name/{ProductName}": {
       "post": {
         "tags": [
@@ -169,7 +196,7 @@
         }
       }
     },
-    "/api/ECommarce/Checkout": {
+    "/api/ECommarce/OrderCheckout": {
       "get": {
         "tags": [
           "ECommarce"
@@ -181,10 +208,69 @@
         }
       }
     },
-    "/api/ECommarce/Payment": {
+    "/api/ECommarce/Payment/{pay}": {
       "post": {
         "tags": [
           "ECommarce"
+        ],
+        "parameters": [
+          {
+            "name": "pay",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ECommarce/Search/{ProductName}": {
+      "get": {
+        "tags": [
+          "ECommarce"
+        ],
+        "parameters": [
+          {
+            "name": "ProductName",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/ECommarce/OrderHistory/{CustomerId}": {
+      "get": {
+        "tags": [
+          "ECommarce"
+        ],
+        "parameters": [
+          {
+            "name": "CustomerId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "pattern": "^-?(?:0|[1-9]\\d*)$",
+              "type": [
+                "integer",
+                "string"
+              ],
+              "format": "int32"
+            }
+          }
         ],
         "responses": {
           "200": {

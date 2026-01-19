@@ -92,9 +92,24 @@ namespace ApplicationLayer.Controllers
             }
 
             var result = odservice.AddToCartByName(ProductName);
-            if(result == null)
-            { 
-                 return BadRequest("Product not found");
+            if (result == null)
+            {
+                return BadRequest("Product not found");
+            }
+            return Ok(result);
+        }
+
+        [HttpPost("CutFromCart/{id}")]
+        public IActionResult CutFromCart(int id)
+        {
+            if (id <= 0)
+            {
+                return BadRequest("Product ID is required to remove from cart");
+            }
+            var result = odservice.DecreaseOneById(id);
+            if (!result.Any())
+            {
+                return BadRequest("Product not found in cart");
             }
             return Ok(result);
         }
@@ -112,7 +127,7 @@ namespace ApplicationLayer.Controllers
             {
                 return BadRequest("Product not found in cart");
             }
-            return Ok();    
+            return Ok();
 
         }
 
@@ -121,6 +136,10 @@ namespace ApplicationLayer.Controllers
         public IActionResult ViewCart()
         {
             var cartItems = odservice.ViewCart();
+            if (!cartItems.Any())
+            {
+                return BadRequest("EmptyCart");
+            }
             return Ok(cartItems);
         }
 
@@ -135,17 +154,69 @@ namespace ApplicationLayer.Controllers
             return Ok("Cart Cleared");
         }
 
-        [HttpGet("Checkout")]
+        [HttpGet("OrderCheckout")]
         public IActionResult Checkout()
         {
-            return Ok();
+            var total = odservice.TotalCost();
+            if (total <= 0) 
+            { 
+                return BadRequest("Cart is empty, Add items to cart before checkout");
+            }
+
+            return Ok("Total Purchased = " + total);
         }
 
-        [HttpPost("Payment")]
-        public IActionResult Payment()
+        [HttpPost("Payment/{pay}")]
+        public IActionResult Payment(string pay)
         {
-            return Ok();
+            if(odservice.TotalCost() <= 0)
+            {
+                return BadRequest("Cart is empty, Add items to cart before placing order");
+            }
+
+            if (pay.IsNullOrEmpty())
+            {
+                return BadRequest("Payment Method is required");
+            }
+
+            if (pay != "Cash" && pay != "Card")
+            {
+                return BadRequest("Only Cash or Card");
+            }
+
+            var result = odservice.PlaceOrder(pay);
+            if (!result)
+            {
+                return BadRequest("Payment Failed");
+            }
+
+            return Ok("Successfully Placed Order");
         }
 
+        [HttpGet("Search/{ProductName}")]
+        public IActionResult search(string ProductName)
+        {
+            var product = odservice.SearchProduct(ProductName);
+            if (product == null)
+            {
+                return BadRequest("Invalid Product Name");
+            }
+            return Ok(product);
+        }
+
+        [HttpGet("OrderHistory/{CustomerId}")]
+        public IActionResult OrderHistory(int CustomerId)
+        {
+            if (CustomerId <= 0)
+            {
+                return BadRequest("Customer ID is required to view order status");
+            }
+            var status = odservice.GetOrderById(CustomerId);
+            if (!status.Any())
+            {
+                return BadRequest("No orders found for this customer");
+            }
+            return Ok(status);
+        }
     }
 }
