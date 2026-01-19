@@ -60,6 +60,8 @@ namespace DAL.DataAccessPoint
             var product = (from p in db.Products
                            where p.ProductName.Contains(name)
                            select p).SingleOrDefault();
+            if (product == null)
+                return new Product();
             return product;
         }
 

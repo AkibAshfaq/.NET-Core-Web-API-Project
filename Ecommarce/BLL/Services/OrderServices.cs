@@ -164,6 +164,11 @@ namespace BLL.Services
                 factory.EcommarceFeature().AddToOrder(order);
             }
 
+            if(pay.IsNullOrEmpty())
+            {
+                return false;
+            }
+
             OrderDetailDTO orderdetaildto = new OrderDetailDTO
             {
                 CustomerId = 1,

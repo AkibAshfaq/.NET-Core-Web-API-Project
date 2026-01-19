@@ -75,7 +75,7 @@ namespace ApplicationLayer.Controllers
             }
 
             var product = odservice.RemoveFromCartById(ProductId);
-            if (product == null)
+            if (!product)
             {
                 return BadRequest("Product not found in cart");
             }
@@ -84,9 +84,9 @@ namespace ApplicationLayer.Controllers
 
 
         [HttpPut("AddToCart/Name/{ProductName}")]
-        public IActionResult AddToCart(string? ProductName)
+        public IActionResult AddToCart(string ProductName)
         {
-            if (ProductName.IsNullOrEmpty())
+            if (string.IsNullOrEmpty(ProductName))
             {
                 return BadRequest("Product Name is required to add to cart");
             }

@@ -1,9 +1,6 @@
 ﻿using BLL.DTOs;
 using DAL;
 using DAL.EF.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace BLL.Services
 {
@@ -16,7 +13,6 @@ namespace BLL.Services
         {
             this.factory = factory;
         }
-
 
         public List<ProductDTO> AllProducts()
         {
@@ -56,7 +52,7 @@ namespace BLL.Services
         public bool DeleteProduct(int id)
         {
             var repo = factory.ProductFeature();
-            if(repo == null) return false;
+            if (repo == null) return false;
             return repo.DeleteProduct(id);
         }
 
